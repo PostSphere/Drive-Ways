@@ -1,0 +1,19 @@
+.list-group a:hover {
+  background-color: rgba(4, 60, 88, 0.918);
+  color: white;
+}
+
+.list-group a.active {
+  background-color: rgba(4, 60, 88, 0.918);
+  color: white;
+}
+
+
+  .navbar-nav .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+  
+  
+  
+  

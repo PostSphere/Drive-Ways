@@ -1,0 +1,12 @@
+Nav .Nav_Item{
+    color: white;
+}
+
+
+Nav .Nav_Item:hover{
+    color: rgba(219, 139, 139, 0.884);
+  
+}
+
+
+

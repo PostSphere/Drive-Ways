@@ -1,0 +1,10 @@
+.carousel-item img {
+    max-height: 540px;
+    object-fit: cover;
+  }
+  /* Example for smaller screens */
+  @media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 300px; /* Adjust max-height for smaller screens */
+  }
+  }

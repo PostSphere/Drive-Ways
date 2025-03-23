@@ -1,0 +1,164 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "john.doe@example.com",
+        "password": "hashed_password",
+        "phone": "123-456-7890",
+        "address": "123 Main St, Anytown, USA",
+        "role": "customer"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane.smith@example.com",
+        "password": "hashed_password",
+        "phone": "987-654-3210",
+        "address": "456 Elm St, Othertown, USA",
+        "role": "admin"
+      }
+    ],
+    "cars": [
+      {
+        "id": 1,
+        "brand": "Tesla",
+        "model": "Model S",
+        "year": 2020,
+        "licensePlate": "ABC123",
+        "pricePerDay": 100,
+        "status": "available",
+        "locationId": 1,
+        "image": "https://example.com/images/tesla_model_s.jpg"
+      },
+      {
+        "id": 2,
+        "brand": "Ford",
+        "model": "Mustang",
+        "year": 2019,
+        "licensePlate": "XYZ789",
+        "pricePerDay": 80,
+        "status": "rented",
+        "locationId": 2,
+        "image": "https://example.com/images/ford_mustang.jpg"
+      }
+    ],
+    "bookings": [
+      {
+        "id": 1,
+        "userId": 1,
+        "carId": 1,
+        "startDate": "2023-05-01T10:00:00Z",
+        "endDate": "2023-05-05T10:00:00Z",
+        "totalPrice": 400,
+        "status": "confirmed"
+      },
+      {
+        "id": 2,
+        "userId": 1,
+        "carId": 2,
+        "startDate": "2023-06-01T10:00:00Z",
+        "endDate": "2023-06-10T10:00:00Z",
+        "totalPrice": 800,
+        "status": "completed"
+      }
+    ],
+    "payments": [
+      {
+        "id": 1,
+        "bookingId": 1,
+        "amount": 400,
+        "paymentMethod": "credit card",
+        "paymentDate": "2023-04-30T15:00:00Z",
+        "status": "successful"
+      },
+      {
+        "id": 2,
+        "bookingId": 2,
+        "amount": 800,
+        "paymentMethod": "paypal",
+        "paymentDate": "2023-05-30T15:00:00Z",
+        "status": "successful"
+      }
+    ],
+    "locations": [
+      {
+        "id": 1,
+        "name": "Downtown Depot",
+        "address": "100 Central Ave, Metropolis, USA",
+        "city": "Metropolis",
+        "state": "NY",
+        "zipCode": "10001"
+      },
+      {
+        "id": 2,
+        "name": "Airport Branch",
+        "address": "200 Airport Rd, Skycity, USA",
+        "city": "Skycity",
+        "state": "CA",
+        "zipCode": "90001"
+      }
+    ]
+  }
+  
+
+
+
+
+
+
+  
+export interface User {
+    id: number;
+    name: string;
+    email: string;
+    password: string;
+    phone: string;
+    address: string;
+    role: 'customer' | 'admin';
+  }
+  
+  // src/entities/Car.ts
+  export interface Car {
+    car number: string;
+    brand: string;
+    model: string;
+    year: number;
+    licensePlate: string;
+    pricePerDay: number;
+    status: 'available' | 'rented' | 'maintenance';
+    locationId: number;
+    image: string;
+  }
+  
+  // src/entities/Booking.ts
+  export interface Booking {
+    id: number;
+    userId: number;
+    carId: number;
+    startDate: Date;
+    endDate: Date;
+    totalPrice: number;
+    status: 'pending' | 'confirmed' | 'completed' | 'cancelled';
+  }
+  
+  // src/entities/Payment.ts
+  export interface Payment {
+    id: number;
+    bookingId: number;
+    amount: number;
+    paymentMethod: 'credit card' | 'paypal' | 'cash';
+    paymentDate: Date;
+    status: 'successful' | 'pending' | 'failed';
+  }
+  
+  // src/entities/Location.ts
+  export interface Location {
+    id: number;
+    name: string;
+    address: string;
+    city: string;
+    state: string;
+    zipCode: string;
+  }
+  

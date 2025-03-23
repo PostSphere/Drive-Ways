@@ -1,0 +1,36 @@
+.About-Image {
+    background-image: url('../../../public/images/Contacts.jpg');  
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding-top: 150px;
+    padding-bottom: 180px;
+    margin-bottom: 100px; 
+    width: 100%;
+  }
+  
+ .section-paragraph{
+    text-align: justify;
+}
+
+.More_About{
+  margin-top: 100px;
+  background-color: aqua;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.More_About_Img{
+  border-radius: 10px; 
+}
+.section-paragraph-2{
+  text-align: justify;
+  padding-right: 20px;
+}
+.section-paragraph_h6{
+  color: yellow;
+}
+.Abut_us{
+  color: rgb(50, 18, 78);
+}
